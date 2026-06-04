@@ -3,205 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Joshua Portfolio</title>
+    <title>John Joshua Rañeses</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-        /* Global Styles & Dark Theme */
-        body { 
-            font-family: 'Garamond', serif; 
-            line-height: 1.6; 
-            color: #e0e0e0; 
+        /* Base Setup & Inter Font */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            font-size: 14px; /* Small, readable base font size */
             background-color: #121212;
-            max-width: 1000px; 
-            margin: auto; 
-            padding: 40px 20px; 
-            font-size: 18px; 
+            line-height: 1.5;
         }
 
-        /* Centered Header Layout */
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding-bottom: 30px;
+        /* SECTION 1: DARKER (Navbar) */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: rgba(18, 18, 18, 0.85); /* Dark with slight transparency */
+            backdrop-filter: blur(8px); /* Adds a modern frosted glass effect */
             border-bottom: 1px solid #333;
-        }
-        h1 { 
-            color: #ffffff; 
-            font-size: 2.8em;
-            margin-bottom: 5px;
-            letter-spacing: 1px;
-        }
-        .contact-info { 
-            font-size: 1em; 
-            color: #a0a0a0; 
-        }
-        .contact-info a { 
-            color: #ffffff; 
-            text-decoration: none; 
-            border-bottom: 1px dotted #888;
-            transition: border-bottom 0.2s;
-        }
-        .contact-info a:hover { 
-            border-bottom: 1px solid #ffffff;
-        }
-
-        /* Header Split Layout */
-        .header-split {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            padding: 0 10px;
-        }
-        .header-left {
-            text-align: left;
-        }
-        .header-right {
-            text-align: right;
-        }
-        .main-text {
-            font-size: 1.2em;
-            color: #ffffff;
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-        .sub-text {
-            font-size: 1em;
-            color: #b0b0b0;
-            font-style: italic;
-        }
-
-        /* Section Headings */
-        h2 { 
-            color: #ffffff; 
-            font-size: 1.8em;
-            font-weight: normal;
-            margin-bottom: 25px;
-        }
-
-        /* CSS Grid for Portfolio Models */
-        .portfolio-grid {
+            padding: 15px 40px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            z-index: 1000;
+        }
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        .nav-links {
+            display: flex;
             gap: 25px;
         }
-        .grid-item {
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            padding: 25px;
-            border-radius: 6px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+        .nav-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
         }
-        .grid-item:hover {
-            transform: translateY(-3px);
-            border-color: #666;
-        }
-        .project-title { 
-            font-weight: bold; 
-            font-size: 1.25em;
+        .nav-links a:hover {
             color: #ffffff;
-            margin-bottom: 10px;
         }
-        .project-description {
-            font-size: 0.95em;
+
+        /* SECTION 2: LIGHTER (About) */
+        .section-about {
+            background-color: #1e1e1e; /* Lighter monochrome shade */
+            padding: 120px 20px;
+            text-align: center;
+        }
+        .about-name {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+        }
+        .about-title {
+            font-size: 2.2rem;
+            font-weight: 500;
             color: #cccccc;
-            margin-bottom: 15px;
+            margin: 0 0 15px 0;
         }
-        .project-link { 
-            display: inline-block;
-            margin-top: 15px;
-            color: #ffffff; 
-            text-decoration: none; 
-            font-size: 0.9em; 
+        .about-location {
+            font-size: 1rem;
+            color: #999999;
+            margin: 0 0 25px 0;
+        }
+        .about-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .btn {
+            font-size: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 20px;
             border: 1px solid #555;
-            padding: 6px 12px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            border-radius: 6px;
+            transition: all 0.2s;
+            background-color: transparent;
         }
-        .project-link:hover { 
-            background-color: #333; 
+        .btn:hover {
+            background-color: #ffffff;
+            color: #121212;
+            border-color: #ffffff;
         }
-        ul { 
-            padding-left: 20px; 
-            margin-top: 10px;
-            font-size: 0.95em;
+
+        /* SECTION 3: DARKER (Education) */
+        .section-education {
+            background-color: #121212; /* Darker monochrome shade */
+            padding: 80px 40px;
         }
-        li { 
-            margin-bottom: 8px; 
-            color: #b0b0b0;
+        .edu-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows stacking on smaller screens */
+        }
+        .edu-box {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 16px; /* Curved boxes */
+            padding: 30px;
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .edu-main {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .edu-sub {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+        }
+        .badge-acca {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background-color: #ffffff; /* High contrast so it pops */
+            color: #000000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Placeholders for upcoming sections */
+        .placeholder-section {
+            padding: 100px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>John Joshua Rañeses</h1>
-        <div class="contact-info">
-            Dubai, United Arab Emirates | 
-            <a href="mailto:jjcraneses@gmail.com">jjcraneses@gmail.com</a> | 
-            <a href="https://www.linkedin.com/in/jjcraneses" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/JRaneses" target="_blank">GitHub</a>
+    <nav class="navbar">
+        <div class="nav-brand">John Joshua Rañeses</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
         </div>
-        
-        <div class="header-split">
-            <div class="header-left">
-                <div class="main-text">Bachelor of Arts with Honors, Business and Management (Accounting)</div>
-                <div class="sub-text">Bath Spa University</div>
-            </div>
-            <div class="header-right">
-                <div class="main-text">Association of Chartered Certified Accountants (ACCA)</div>
-                <div class="sub-text">Student (9 out of 13 papers completed)</div>
-            </div>
-        </div>
-    </header>
+        <div></div>
+    </nav>
 
-    <div>
-        <h2>Financial Modeling Portfolio</h2>
+    <section id="about" class="section-about">
+        <h1 class="about-name">John Joshua Rañeses</h1>
+        <h2 class="about-title">Honors Accounting Graduate</h2>
+        <div class="about-location">Dubai, UAE</div>
         
-        <div class="portfolio-grid">
+        <div class="about-buttons">
+            <a href="mailto:jjcraneses@gmail.com" class="btn">jjcraneses@gmail.com</a>
+            <a href="tel:+971564861121" class="btn">(056)486-1121</a>
+            <a href="https://linkedin.com/in/jjcraneses" target="_blank" class="btn">LinkedIn</a>
+        </div>
+    </section>
+
+    <section id="education" class="section-education">
+        <div class="edu-container">
             
-            <div class="grid-item">
-                <div class="project-title">DCF Valuation Model of Micron Technology, Inc.</div>
-                <div class="project-description">Estimated the intrinsic value of Micron using historical unlevered free cash flow (UFCF), with forward projections under various scenarios.</div>
-                <ul>
-                    <li>Built historical financial statements and projected 5-year free cash flows.</li>
-                    <li>Calculated Weighted Average Cost of Capital (WACC).</li>
-                    <li>Performed sensitivity analysis using data tables under various terminal growth scenarios.</li>
-                </ul>
-                <a href="[Link to your Excel file in GitHub]" class="project-link" target="_blank">View Excel Model</a>
+            <div class="edu-box">
+                <div class="edu-main">Bath Spa University</div>
+                <div class="edu-sub">BA (Hons) Business & Management (Accounting)</div>
+                <div class="badge-acca">ACCA-ACCREDITED</div>
             </div>
 
-            <div class="grid-item">
-                <div class="project-title">Financial Portfolio Reporting Assistant Demo</div>
-                <div class="project-description">Interactive dashboard tracking operating budget versus actuals for management review.</div>
-                <ul>
-                    <li>Automated data cleaning and visualization utilizing Power Query.</li>
-                    <li>Implemented PivotTables and INDEX/MATCH functions to dynamically update metrics.</li>
-                    <li>Highlighted key performance variances and drivers.</li>
-                </ul>
-                <a href="[Link to your Excel file in GitHub]" class="project-link" target="_blank">View Excel Model</a>
-            </div>
-
-            <div class="grid-item">
-                <div class="project-title">[Placeholder: e.g., 3-Statement Model]</div>
-                <div class="project-description">[Brief description of the model's purpose and scope.]</div>
-                <ul>
-                    <li>[Technical skill applied, e.g., Created dynamic debt schedules with circular reference toggles].</li>
-                    <li>[Outcome or analysis generated].</li>
-                </ul>
-                <a href="#" class="project-link" target="_blank">View Excel Model</a>
-            </div>
-
-            <div class="grid-item">
-                <div class="project-title">[Placeholder: e.g., Scenario & Sensitivity Analysis]</div>
-                <div class="project-description">[Brief description of the model's purpose and scope.]</div>
-                <ul>
-                    <li>[Technical skill applied, e.g., Utilized Scenario Manager and CHOOSE functions].</li>
-                    <li>[Outcome or analysis generated].</li>
-                </ul>
-                <a href="#" class="project-link" target="_blank">View Excel Model</a>
+            <div class="edu-box">
+                <div class="edu-main">Association of Chartered Certified Accountants</div>
+                <div class="edu-sub">Student (9 of 13 complete)</div>
             </div>
 
         </div>
-    </div>
+    </section>
+
+    <section id="projects" class="placeholder-section">
+        <h2>Projects Section (Placeholder)</h2>
+    </section>
+    
+    <section id="experience" class="placeholder-section" style="background-color: #1e1e1e;">
+        <h2>Experience Section (Placeholder)</h2>
+    </section>
+
+    <section id="contact" class="placeholder-section">
+        <h2>Contact Section (Placeholder)</h2>
+    </section>
 
 </body>
 </html>
