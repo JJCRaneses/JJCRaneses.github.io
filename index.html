@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Joshua Rañeses</title>
     
+    <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Base Setup & Inter Font */
+        /* Base Setup & Roboto Font */
         html {
             scroll-behavior: smooth;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             color: #e0e0e0;
@@ -63,12 +64,12 @@
             background-color: #1e1e1e; 
             padding: 120px 20px;
             display: flex;
-            justify-content: center; /* Centers the entire block on the screen */
+            justify-content: center; /* Centers the content block on the screen */
         }
         .about-content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Left-aligns the text and buttons inside the block */
+            align-items: flex-start; /* Left-aligns text inside the block */
             text-align: left;
         }
         .about-name {
@@ -87,19 +88,19 @@
         .about-location {
             font-size: 1rem; 
             color: #999999;
-            margin: 0 0 20px 0;
+            margin: 0 0 15px 0;
         }
         .about-buttons {
             display: flex;
-            gap: 12px; /* Buttons will now align to the left naturally */
+            gap: 8px; /* Tighter spacing for smaller buttons */
         }
         .btn {
-            font-size: 0.85rem; 
+            font-size: 0.7rem; /* Significantly smaller text */
             color: #ffffff;
             text-decoration: none;
-            padding: 6px 16px; 
+            padding: 4px 10px; /* Reduced padding */
             border: 1px solid #555;
-            border-radius: 6px;
+            border-radius: 4px; /* Tighter corners for a smaller button */
             transition: all 0.2s;
             background-color: transparent;
         }
@@ -107,6 +108,53 @@
             background-color: #ffffff;
             color: #121212;
             border-color: #ffffff;
+        }
+
+        /* SECTION 3: DARKER (Education) */
+        .section-education {
+            background-color: #121212; 
+            padding: 80px 40px;
+        }
+        .edu-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; 
+        }
+        .edu-box {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 16px; 
+            padding: 30px;
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .edu-main {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+        .edu-sub {
+            font-size: 0.95rem;
+            color: #a0a0a0;
+        }
+        .badge-acca {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background-color: #ffffff; 
+            color: #000000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
         /* Placeholders */
@@ -119,6 +167,7 @@
 </head>
 <body>
 
+    <!-- SECTION 1: DARKER -->
     <nav class="navbar">
         <div class="nav-brand">John Joshua Rañeses</div>
         <div class="nav-links">
@@ -135,35 +184,39 @@
     <section id="about" class="section-about">
         <div class="about-content">
             <h1 class="about-name">John Joshua Rañeses</h1>
-            <h2 class="about-title">Honors Accounting Graduate</h2>
+            <h2 class="about-title">Excel/Sheets · XERO/QBO</h2>
             <div class="about-location">Dubai, UAE</div>
             
             <div class="about-buttons">
                 <a href="mailto:jjcraneses@gmail.com" class="btn">jjcraneses@gmail.com</a>
-                <a href="tel:+971564861121" class="btn">056 486 1121</a>
+                <a href="tel:++971564861121" class="btn">+971 56 486 1121</a>
                 <a href="https://linkedin.com/in/jjcraneses" target="_blank" class="btn">LinkedIn</a>
             </div>
         </div>
     </section>
 
+    <!-- SECTION 3: DARKER -->
     <section id="education" class="section-education">
         <div class="edu-container">
             
+            <!-- Left Side: University -->
             <div class="edu-box">
                 <div class="edu-main">Bath Spa University</div>
                 <div class="edu-sub">BA (Hons) Business & Management (Accounting)</div>
                 <div class="badge-acca">ACCA-Accredited</div>
             </div>
 
+            <!-- Right Side: ACCA -->
             <div class="edu-box">
                 <div class="edu-main">Association of Chartered Certified Accountants</div>
-                <div class="edu-sub">Student (Part Qualified)</div>
+                <div class="edu-sub">Student</div>
                 <div class="badge-acca">9/13 Completed</div>
             </div>
 
         </div>
     </section>
 
+    <!-- Temporary placeholders -->
     <section id="projects" class="placeholder-section">
         <h2>Projects Section (Placeholder)</h2>
     </section>
