@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Joshua Raneses</title>
+    <title>John Joshua Rañeses</title>
     
     <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +30,7 @@
             text-align: center;
             font-size: 2rem;
             color: #ffffff;
-            margin: 0 0 40px 0; /* Pushes the content below it down */
+            margin: 0 0 40px 0; 
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -49,7 +49,6 @@
             z-index: 1000;
         }
         .nav-brand {
-            font-family: 'Garamond', serif; /* Exclusively Garamond */
             font-weight: 700;
             font-size: 1.4rem; 
             color: #ffffff;
@@ -84,9 +83,25 @@
             text-align: left;
             max-width: 800px;
         }
+        
+        /* NEW: Green Status Pill */
+        .status-pill {
+            display: inline-block;
+            background-color: rgba(34, 197, 94, 0.15); /* Subtle green tint */
+            color: #4ade80; /* Bright green text */
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px; 
+            text-transform: uppercase;
+        }
+
         .about-name {
-            font-family: 'Garamond', serif; /* Exclusively Garamond */
-            font-size: 3.2rem; /* Made much larger */
+            font-family: 'Garamond', serif; 
+            font-size: 3.2rem; 
             font-weight: 700;
             color: #ffffff;
             margin: 0 0 5px 0;
@@ -124,7 +139,7 @@
             border-color: #ffffff;
         }
 
-        /* NEW: Skills Section under Contacts */
+        /* Skills Section under Contacts */
         .about-skills {
             margin-top: 25px;
             width: 100%;
@@ -154,7 +169,7 @@
         /* SECTION 3: DARKER (Education) */
         .section-education {
             background-color: #121212; 
-            padding: 80px 40px;
+            padding: 50px 40px 80px 40px; /* Reduced top padding */
         }
         .edu-container {
             max-width: 1000px;
@@ -200,9 +215,8 @@
 
         /* Placeholders */
         .placeholder-section {
-            padding: 100px 20px;
+            padding: 50px 20px 100px 20px; /* Reduced top padding */
             border-top: 1px solid #333;
-            /* Flex properties below keep the title at the top and the placeholder text centered */
             display: flex;
             flex-direction: column;
             align-items: center; 
@@ -227,25 +241,27 @@
     <!-- SECTION 2: LIGHTER -->
     <section id="about" class="section-about">
         <div class="about-content">
+            <!-- New Status Pill -->
+            <div class="status-pill">Seeking Internships</div>
+            
             <h1 class="about-name">John Joshua Rañeses</h1>
             <h2 class="about-title">Honors Accounting Graduate</h2>
             <div class="about-location">Dubai, UAE</div>
             
             <div class="about-buttons">
-                <a href="mailto:jjcraneses@gmail.com" class="btn">jjcraneses@gmail.com</a>
+                <a href="mailto:jjcraneses@gmail.com" class="btn">JJCRaneses@gmail.com</a>
                 <a href="tel:+971564861121" class="btn">+971 56 486 1121</a>
-                <a href="https://linkedin.com/in/jjcraneses" target="_blank" class="btn">LinkedIn</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="btn">LinkedIn</a>
             </div>
 
             <!-- Skills Badges -->
             <div class="about-skills">
-                <div class="skills-title">Skills</div>
+                <div class="skills-title">Core Competencies</div>
                 <div class="skills-container">
-                    <span class="skill-badge">Excel</span>
-                    <span class="skill-badge">Sheets</span>
-                    <span class="skill-badge">QBO</span>
-                    <span class="skill-badge">XERO</span>
-                    <!-- Add more badges here by copying the line above -->
+                    <span class="skill-badge">Microsoft Excel</span>
+                    <span class="skill-badge">Google Sheets</span>
+                    <span class="skill-badge">QBO ProAdvisor</span>
+                    <span class="skill-badge">L1 Xero Associate</span>
                 </div>
             </div>
         </div>
