@@ -381,8 +381,54 @@
             color: #121212;
             border-color: #ffffff;
         }
+        /* SECTION 5: DARK (CV) */
+        .section-experience {
+            padding: 40px 20px 40px 20px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        .cv-container {
+            max-width: 350px; /* Controls the maximum width of the thumbnail */
+            width: 100%;
+            margin: 0 auto;
+        }
+        .cv-link {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .cv-link:hover {
+            transform: translateY(-5px);
+            border-color: #ffffff;
+        }
+        .cv-thumbnail {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #333;
+            opacity: 0.85; /* Dims the bright white of a CV slightly for dark mode */
+            transition: opacity 0.2s;
+        }
+        .cv-link:hover .cv-thumbnail {
+            opacity: 1; /* Brightens on hover */
+        }
+        .cv-label {
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-        /* SECTION 5 & 6 Placeholders */
+        /* SECTION 6: LIGHT */
         .placeholder-section {
             padding: 40px 20px 40px 20px; 
             display: flex;
@@ -546,9 +592,19 @@
         </div>
     </section>
     
-    <section id="experience" class="placeholder-section" style="background-color: #121212; border-top: 1px solid #333;">
+     <section id="experience" class="section-experience" style="background-color: #121212; border-top: 1px solid #333;">
         <h2 class="section-title">Professional Experience</h2>
-        <div style="color: #cccccc; font-size: 1.1rem;">Currently none. Would you like to change that?</div>
+        
+        <div class="cv-container">
+            <a href="resume.pdf" target="_blank" class="cv-link">
+                <img src="jjcraneses-thumbnail.jpg" alt="Preview of CV" class="cv-thumbnail">
+                <div class="cv-label">View</div>
+            </a>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="resume.pdf" download="jjcraneses.pdf" class="btn-large" style="display: inline-block;">Download</a>
+            </div>
+        </div>
     </section>
 
     <section id="contact" class="placeholder-section" style="background-color: #1e1e1e; border-top: 1px solid #333;">
