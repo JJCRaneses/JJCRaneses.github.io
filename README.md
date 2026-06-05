@@ -1,3 +1,2 @@
-# My Portfolio
-## Hello, World.
-- What are you doing here?
+## Hello There!
+Welcome to my repo, this is where I setup and organize my website.
