@@ -62,36 +62,42 @@
         .section-about {
             background-color: #1e1e1e; 
             padding: 120px 20px;
-            text-align: center;
+            display: flex;
+            justify-content: center; /* Centers the entire block on the screen */
+        }
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Left-aligns the text and buttons inside the block */
+            text-align: left;
         }
         .about-name {
-            font-size: 1.75rem; /* Significantly reduced */
+            font-size: 1.75rem; 
             font-weight: 700;
             color: #ffffff;
             margin: 0 0 5px 0;
             letter-spacing: -0.5px;
         }
         .about-title {
-            font-size: 1.25rem; /* Reduced to sit closer to location size */
+            font-size: 1.25rem; 
             font-weight: 500;
             color: #cccccc;
             margin: 0 0 10px 0;
         }
         .about-location {
-            font-size: 1rem; /* Base size */
+            font-size: 1rem; 
             color: #999999;
             margin: 0 0 20px 0;
         }
         .about-buttons {
             display: flex;
-            justify-content: center;
-            gap: 12px;
+            gap: 12px; /* Buttons will now align to the left naturally */
         }
         .btn {
-            font-size: 0.85rem; /* Smaller button text */
+            font-size: 0.85rem; 
             color: #ffffff;
             text-decoration: none;
-            padding: 6px 16px; /* Reduced padding for a smaller button profile */
+            padding: 6px 16px; 
             border: 1px solid #555;
             border-radius: 6px;
             transition: all 0.2s;
@@ -101,53 +107,6 @@
             background-color: #ffffff;
             color: #121212;
             border-color: #ffffff;
-        }
-
-        /* SECTION 3: DARKER (Education) */
-        .section-education {
-            background-color: #121212; 
-            padding: 80px 40px;
-        }
-        .edu-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap; 
-        }
-        .edu-box {
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 16px; 
-            padding: 30px;
-            flex: 1;
-            min-width: 320px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .edu-main {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 5px;
-        }
-        .edu-sub {
-            font-size: 0.95rem;
-            color: #a0a0a0;
-        }
-        .badge-acca {
-            display: inline-block;
-            align-self: flex-start;
-            margin-top: 15px;
-            padding: 5px 12px;
-            border-radius: 20px;
-            background-color: #ffffff; 
-            color: #000000;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
         }
 
         /* Placeholders */
