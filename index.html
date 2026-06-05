@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Joshua Rañeses</title>
+    <title>John Joshua Raneses</title>
     
     <!-- Google Fonts: Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +25,16 @@
             line-height: 1.5;
         }
 
+        /* SECTION TITLES */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 0 0 40px 0; /* Pushes the content below it down */
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
         /* SECTION 1: DARKER (Navbar) */
         .navbar {
             position: sticky;
@@ -39,10 +49,11 @@
             z-index: 1000;
         }
         .nav-brand {
+            font-family: 'Garamond', serif; /* Exclusively Garamond */
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.4rem; 
             color: #ffffff;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
         }
         .nav-links {
             display: flex;
@@ -64,20 +75,23 @@
             background-color: #1e1e1e; 
             padding: 120px 20px;
             display: flex;
-            justify-content: center; /* Centers the content block on the screen */
+            justify-content: center; 
         }
         .about-content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Left-aligns text inside the block */
+            align-items: flex-start; 
             text-align: left;
+            max-width: 800px;
         }
         .about-name {
-            font-size: 1.75rem; 
+            font-family: 'Garamond', serif; /* Exclusively Garamond */
+            font-size: 3.2rem; /* Made much larger */
             font-weight: 700;
             color: #ffffff;
             margin: 0 0 5px 0;
             letter-spacing: -0.5px;
+            line-height: 1.1;
         }
         .about-title {
             font-size: 1.25rem; 
@@ -92,15 +106,15 @@
         }
         .about-buttons {
             display: flex;
-            gap: 8px; /* Tighter spacing for smaller buttons */
+            gap: 8px; 
         }
         .btn {
-            font-size: 0.7rem; /* Significantly smaller text */
+            font-size: 0.7rem; 
             color: #ffffff;
             text-decoration: none;
-            padding: 4px 10px; /* Reduced padding */
+            padding: 4px 10px; 
             border: 1px solid #555;
-            border-radius: 4px; /* Tighter corners for a smaller button */
+            border-radius: 4px; 
             transition: all 0.2s;
             background-color: transparent;
         }
@@ -108,6 +122,33 @@
             background-color: #ffffff;
             color: #121212;
             border-color: #ffffff;
+        }
+
+        /* NEW: Skills Section under Contacts */
+        .about-skills {
+            margin-top: 25px;
+            width: 100%;
+        }
+        .skills-title {
+            font-size: 0.75rem;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .skill-badge {
+            font-size: 0.7rem;
+            color: #cccccc;
+            background-color: #2a2a2a;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #333;
         }
 
         /* SECTION 3: DARKER (Education) */
@@ -160,8 +201,11 @@
         /* Placeholders */
         .placeholder-section {
             padding: 100px 20px;
-            text-align: center;
             border-top: 1px solid #333;
+            /* Flex properties below keep the title at the top and the placeholder text centered */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
         }
     </style>
 </head>
@@ -184,21 +228,34 @@
     <section id="about" class="section-about">
         <div class="about-content">
             <h1 class="about-name">John Joshua Rañeses</h1>
-            <h2 class="about-title">Excel/Sheets · XERO/QBO</h2>
+            <h2 class="about-title">Honors Accounting Graduate</h2>
             <div class="about-location">Dubai, UAE</div>
             
             <div class="about-buttons">
                 <a href="mailto:jjcraneses@gmail.com" class="btn">jjcraneses@gmail.com</a>
-                <a href="tel:++971564861121" class="btn">+971 56 486 1121</a>
+                <a href="tel:+971564861121" class="btn">+971 56 486 1121</a>
                 <a href="https://linkedin.com/in/jjcraneses" target="_blank" class="btn">LinkedIn</a>
+            </div>
+
+            <!-- Skills Badges -->
+            <div class="about-skills">
+                <div class="skills-title">Skills</div>
+                <div class="skills-container">
+                    <span class="skill-badge">Excel</span>
+                    <span class="skill-badge">Sheets</span>
+                    <span class="skill-badge">QBO</span>
+                    <span class="skill-badge">XERO</span>
+                    <!-- Add more badges here by copying the line above -->
+                </div>
             </div>
         </div>
     </section>
 
     <!-- SECTION 3: DARKER -->
     <section id="education" class="section-education">
+        <h2 class="section-title">Education</h2>
+        
         <div class="edu-container">
-            
             <!-- Left Side: University -->
             <div class="edu-box">
                 <div class="edu-main">Bath Spa University</div>
@@ -212,21 +269,23 @@
                 <div class="edu-sub">Student</div>
                 <div class="badge-acca">9/13 Completed</div>
             </div>
-
         </div>
     </section>
 
-    <!-- Temporary placeholders -->
-    <section id="projects" class="placeholder-section">
-        <h2>Projects Section (Placeholder)</h2>
+    <!-- Placeholder Sections with Centered Titles -->
+    <section id="projects" class="placeholder-section" style="background-color: #1e1e1e;">
+        <h2 class="section-title">Projects</h2>
+        <div style="color: #666;">(Project content will go here)</div>
     </section>
     
-    <section id="experience" class="placeholder-section" style="background-color: #1e1e1e;">
-        <h2>Experience Section (Placeholder)</h2>
+    <section id="experience" class="placeholder-section" style="background-color: #121212;">
+        <h2 class="section-title">Experience</h2>
+        <div style="color: #666;">(Experience content will go here)</div>
     </section>
 
-    <section id="contact" class="placeholder-section">
-        <h2>Contact Section (Placeholder)</h2>
+    <section id="contact" class="placeholder-section" style="background-color: #1e1e1e;">
+        <h2 class="section-title">Contact</h2>
+        <div style="color: #666;">(Contact content will go here)</div>
     </section>
 
 </body>
