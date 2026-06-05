@@ -48,8 +48,9 @@
             z-index: 1000;
         }
         .nav-brand {
-            font-weight: 700;
-            font-size: 1.1rem; 
+            font-family: 'Garamond', serif; /* I love Garamond */
+            font-weight: 500; /* Lower if too bold */
+            font-size: 1.1rem; /* Tweak if looks off */
             color: #ffffff;
             letter-spacing: 0.5px;
         }
@@ -101,7 +102,7 @@
             max-width: 800px;
         }
         
-        /* Green Status Pill "Hey code reviewer, I want a job." */
+        /* Green Status Pill */
         .status-pill {
             display: inline-block;
             background-color: rgba(34, 197, 94, 0.15); 
@@ -136,7 +137,7 @@
             border: 1px solid #444444;
             white-space: nowrap; /* Prevents the text inside the bubble from wrapping */
         }
-        /* The tail pointing right towards the name */
+        /* The speech bubble tail */
         .speech-bubble::after {
             content: '';
             position: absolute;
@@ -386,6 +387,16 @@
         }
         
         /* Contact Section Details */
+        .section-subtitle { /* Goes above the main title */
+            text-align: center;
+            font-size: 0.75rem;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px; /* Space between comment and the main title */
+            font-weight: 700;
+        }
+        
         .section-title {
             margin-bottom: 25px; /* Tighten the gap under the main title */
         }
@@ -537,6 +548,7 @@
     </section>
 
     <section id="contact" class="placeholder-section" style="background-color: #1e1e1e; border-top: 1px solid #333;">
+        <div class="section-subtitle">Looking for an intern?</div>
         <h2 class="section-title">Open to new opportunities</h2>
         <div class="contact-desc">
             I welcome graduate opportunities across Audit, Tax, Advisory, and Finance. Continuous learning drives me—whether through new challenges, emerging technologies, or exposure to different industries and business environments.
