@@ -116,23 +116,27 @@
             text-transform: uppercase;
         }
 
-        /* Name Wrapper & Speech Bubble :V blah blah */
+        /* Name Wrapper & Speech Bubble */
         .name-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 20px;
+            position: relative;
+            display: inline-block; /* Shrink-wraps the container to the exact width of your name */
             margin-bottom: 5px;
         }
         .speech-bubble {
-            position: relative;
+            position: absolute;
+            right: 100%; /* Pushes the bubble outside the left edge of the name container */
+            margin-right: 20px; /* Maintains the 20px gap */
+            top: 50%;
+            transform: translateY(-50%);
             background-color: #333333;
             color: #ffffff;
             padding: 10px 16px;
             border-radius: 8px;
             font-size: 0.9rem;
             border: 1px solid #444444;
+            white-space: nowrap; /* Prevents the text inside the bubble from wrapping */
         }
-        /* The tail pointing right towards the name "It's like I'm talking" */
+        /* The tail pointing right towards the name */
         .speech-bubble::after {
             content: '';
             position: absolute;
@@ -371,12 +375,12 @@
         
         /* Contact Section Details */
         .contact-desc {
-            font-size: 1.05rem;
+            font-size: 0.75rem; /* Reduced from 1.05rem */
             color: #cccccc;
             text-align: center;
-            max-width: 700px;
-            line-height: 1.6;
-            margin-bottom: 30px;
+            max-width: 500px; /* Narrowed the width to keep text readable */
+            line-height: 1.5;
+            margin-bottom: 25px;
         }
         .contact-action-buttons {
             display: flex;
@@ -384,12 +388,12 @@
             justify-content: center;
         }
         .btn-large {
-            font-size: 0.95rem;
+            font-size: 0.8rem; /* Reduced from 0.95rem */
             color: #ffffff;
             text-decoration: none;
-            padding: 10px 24px;
+            padding: 8px 18px; /* Reduced padding */
             border: 1px solid #555;
-            border-radius: 6px;
+            border-radius: 4px; /* Slightly tighter radius */
             transition: all 0.2s;
             background-color: #1a1a1a;
         }
@@ -492,7 +496,7 @@
             <div class="project-box">
                 <div class="proj-title">Stock Portfolio Tracker</div>
                 <div class="proj-desc">A demo portfolio management tool for tracking equity investments, analysing allocation, and monitoring performance metrics over time. The production version developed for freelance clients is confidential.</div>
-                <a href="#" class="https://docs.google.com/spreadsheets/d/1c5rbhu8u0Afy_VqL-iAEI7B-9OFfYlS8rDlE2cX79XY/edit?usp=sharing">View Project</a>
+                <a href="https://docs.google.com/spreadsheets/d/1c5rbhu8u0Afy_VqL-iAEI7B-9OFfYlS8rDlE2cX79XY/edit?usp=sharing" class="proj-link">View Project</a>
             </div>
 
             <div class="project-box">
@@ -503,7 +507,7 @@
 
             <div class="project-box">
                 <div class="proj-title">GPA Calculator</div>
-                <div class="proj-desc">A spreadsheet-based GPA calculator that dynamically computes cumulative GPA from course credits and grades, designed to assess final degree classification. The model was used to test worst-case final exam outcomes, confirming First-Class Honours classification remains achievable.</div>
+                <div class="proj-desc"><em>Need it? Just ask.</em><br><br>A spreadsheet-based GPA calculator that dynamically computes cumulative GPA from weight and grades, designed to assess final degree classification. The model was used to test worst-case final exam outcomes, confirming First-Class Honours classification remains achievable.</div>
                 <a href="#" class="proj-link">Available</a>
             </div>
 
@@ -512,7 +516,7 @@
     
     <section id="experience" class="placeholder-section" style="background-color: #121212; border-top: 1px solid #333;">
         <h2 class="section-title">Professional Experience</h2>
-        <div style="color: #cccccc; font-size: 1.1rem;">Well, other than my freelance work and academics... Work-In-Progress.</div>
+        <div style="color: #cccccc; font-size: 1.1rem;">No professional work yet. Would you like to change that?</div>
     </section>
 
     <section id="contact" class="placeholder-section" style="background-color: #1e1e1e; border-top: 1px solid #333;">
@@ -527,7 +531,7 @@
     </section>
 
     <footer class="footer-watermark">
-        &copy; John Joshua Rañeses | Dubai, UAE | Last Updated: June 2026
+        &copy;2026 John Joshua Rañeses | Dubai, UAE | Last Updated: June 2026
     </footer>
 
 </body>
