@@ -29,7 +29,7 @@
             text-align: center;
             font-size: 2rem;
             color: #ffffff;
-            margin: 0 0 50px 0; 
+            margin: 0 0 25px 0; 
             font-weight: 700;
             letter-spacing: -0.5px;
         }
@@ -135,7 +135,9 @@
             border-radius: 8px;
             font-size: 0.9rem;
             border: 1px solid #444444;
-            white-space: nowrap; /* Prevents the text inside the bubble from wrapping */
+            white-space: normal; /* Choose "nowrap" or "normal" */
+            max-width: 250px; /* Adjust this value to control how wide the bubble gets before wrapping */
+            word-wrap: break-word;
         }
         /* The speech bubble tail */
         .speech-bubble::after {
@@ -202,7 +204,7 @@
             border-color: #ffffff;
         }
 
-        /* Skills Section under Contacts "are you looking for Easter Eggs?" */
+        /* Skills Section under Contacts */
         .about-skills {
             margin-top: 25px;
             width: 100%;
@@ -230,7 +232,7 @@
             border: 1px solid #333;
         }
 
-        /* SECTION 3: DARK (Education) "If you're the Joshua I'm thinking about, I'll stream Dragon Quest VIII if you find this" */
+        /* SECTION 3: DARK (Education) */
         .section-education {
             background-color: #121212; 
             padding: 50px 40px 80px 40px; 
@@ -338,7 +340,7 @@
             margin-bottom: 15px;
             font-weight: 500;
         }
-        .project-box {
+        .proj-box {
             background-color: #121212; 
             border: 1px solid #333;
             border-radius: 16px;
@@ -378,9 +380,9 @@
             border-color: #ffffff;
         }
 
-        /* SECTION 5 & 6 Placeholders #leftovers */
+        /* SECTION 5 & 6 Placeholders */
         .placeholder-section {
-            padding: 50px 20px 100px 20px; 
+            padding: 40px 20px 40px 20px; 
             display: flex;
             flex-direction: column;
             align-items: center; 
@@ -389,7 +391,7 @@
         /* Contact Section Details */
         .section-subtitle { /* Goes above the main title */
             text-align: center;
-            font-size: 0.75rem;
+            font-size: 0.9rem; /* Adjusting based on whether it looks big or small */
             color: #888888;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -455,7 +457,7 @@
             <a href="#contact">Contact</a>
         </div>
         <div class="nav-right">
-            <a href="https://youtu.be/Ng_vwWxfGMg?si=aIzmMkLf4gBB7MCy" class="nav-highlight-btn" target="_blank">My Favorite Video Ever.</a>
+            <a href="https://youtu.be/Ng_vwWxfGMg?si=aIzmMkLf4gBB7MCy" class="nav-highlight-btn" target="_blank">Favorite Video</a>
         </div>
     </nav>
 
@@ -478,7 +480,7 @@
             </div>
 
             <div class="about-skills">
-                <div class="skills-title">Relevant Skills (I want to learn more)</div>
+                <div class="skills-title">Relevant Software (I want to learn more)</div>
                 <div class="skills-container">
                     <span class="skill-badge">Excel</span>
                     <span class="skill-badge">Sheets</span>
@@ -521,19 +523,19 @@
         <h2 class="section-title">Personal Projects</h2>
         <div class="projects-grid">
             
-            <div class="project-box">
+            <div class="proj-box">
+                <div class="proj-title">DCF Model (Micron)</div>
+                <div class="proj-year">May 2026–Present</div> <div class="proj-desc"><em>For learning purposes.</em><br><br>Developing a discounted cash flow (DCF) model for Micron using historical unlevered free cash flow (UFCF), with forward projections under multiple growth scenarios.</div>
+                <a href="#" class="proj-link">Not Available</a>
+            </div>
+
+            <div class="proj-box">
                 <div class="proj-title">Stock Portfolio Tracker</div>
                 <div class="proj-year">July 2025–Present</div> <div class="proj-desc"><em>Active development.</em><br><br>A demo portfolio management tool for tracking equity investments, analyzing allocation, and monitoring performance metrics over time. The production version was developed as a bespoke solution for a private client and is confidential.</div>
                 <a href="https://docs.google.com/spreadsheets/d/1c5rbhu8u0Afy_VqL-iAEI7B-9OFfYlS8rDlE2cX79XY/edit?usp=sharing" class="proj-link">View Project</a>
             </div>
 
-            <div class="project-box">
-                <div class="proj-title">DCF Valuation Model (Micron)</div>
-                <div class="proj-year">May 2026–Present</div> <div class="proj-desc"><em>For learning purposes.</em><br><br>Developing a discounted cash flow (DCF) model for Micron using historical unlevered free cash flow (UFCF), with forward projections under multiple growth scenarios.</div>
-                <a href="#" class="proj-link">Not Available</a>
-            </div>
-
-            <div class="project-box">
+            <div class="proj-box">
                 <div class="proj-title">GPA Calculator</div>
                 <div class="proj-year">May 2026</div> <div class="proj-desc"><em>Need it? Just ask.</em><br><br>A spreadsheet-based GPA calculator that dynamically computes cumulative GPA from weight and grades, designed to assess final degree classification. The model was used to test worst-case final exam outcomes, confirming First-Class Honors classification remains achievable.</div>
                 <a href="#" class="proj-link">Available</a>
